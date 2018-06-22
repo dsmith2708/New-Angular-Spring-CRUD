@@ -1,0 +1,21 @@
+<h2>Customer List</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Account Number</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let customer of customers">
+    <td>
+      {{customer.firstName}}
+      {{customer.lastName}}
+    </td>
+    <td>
+      {{customer.accountNo}}
+    </td>
+    <td><button>Update</button></td>
+    <td><button>Delete</button></td>
+  </tr>
+</table>
