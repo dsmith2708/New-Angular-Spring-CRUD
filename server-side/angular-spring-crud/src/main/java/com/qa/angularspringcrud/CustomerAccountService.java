@@ -1,11 +1,15 @@
-package com.qa.angularspringcrud.service;
+package com.qa.angularspringcrud;
 
-import com.qa.angularspringcrud.domain.CustomerAccount;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
+
 import com.google.gson.Gson;
-import com.qa.angularspringcrud.repository.CustomerAccountRepository;
 
+@Service
 public class CustomerAccountService implements AccountService{
 	
+	@Autowired
 	private CustomerAccountRepository repository;
 	
 	@Override

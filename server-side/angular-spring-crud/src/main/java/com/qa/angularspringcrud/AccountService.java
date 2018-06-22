@@ -1,4 +1,4 @@
-package com.qa.angularspringcrud.service;
+package com.qa.angularspringcrud;
 
 public interface AccountService {
 	String returnAllCustomerAccounts();

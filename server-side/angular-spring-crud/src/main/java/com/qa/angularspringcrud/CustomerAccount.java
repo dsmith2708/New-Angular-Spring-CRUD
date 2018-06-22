@@ -1,4 +1,4 @@
-package com.qa.angularspringcrud.domain;
+package com.qa.angularspringcrud;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
