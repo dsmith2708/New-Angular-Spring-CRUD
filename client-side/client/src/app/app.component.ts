@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Customer Management Service';
+  showCreateCustomer=false;
+
+  showAddCustomer() {
+    this.showCreateCustomer = true;
+  }
 }
