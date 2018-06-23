@@ -16,6 +16,6 @@
       {{customer.accountNo}}
     </td>
     <td><button>Update</button></td>
-    <td><button>Delete</button></td>
+    <td><button (click)="this.deleteCustomer(customer.id)">Delete</button></td>
   </tr>
 </table>

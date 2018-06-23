@@ -20,13 +20,13 @@ public class CustomerAccountService implements AccountService{
 	@Override
 	public String addAccount(String newAccountJson) {
 		repository.save(new Gson().fromJson(newAccountJson, CustomerAccount.class));
-    	return "\"message\" : \"Create successful\"";
+    	return "{\"message\" : \"Create successful\"}";
 	}
 
 	@Override
 	public String deleteAccount(long accountToDeleteID) {
 		repository.deleteById(accountToDeleteID);
-    	return "\"message\" : \"Delete successful\"";
+    	return "{\"message\" : \"Delete successful\"}";
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class CustomerAccountService implements AccountService{
     	customerFromDB.setFirstName(customerFromJson.getFirstName());
     	customerFromDB.setLastName(customerFromJson.getLastName());
     	repository.save(customerFromDB);
-    	return "\"message\" : \"Update successful\"";
+    	return "{\"message\" : \"Update successful\"}";
 	}
 
 }
