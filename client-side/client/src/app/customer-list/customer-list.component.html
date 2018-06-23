@@ -1,21 +1,33 @@
-<h2>Customer List</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Account Number</th>
-    <th>Update</th>
-    <th>Delete</th>
-  </tr>
-  <tr *ngFor="let customer of customers">
-    <td>
-      {{customer.firstName}}
-      {{customer.lastName}}
-    </td>
-    <td>
-      {{customer.accountNo}}
-    </td>
-    <td><button>Update</button></td>
-    <td><button (click)="this.deleteCustomer(customer.id)">Delete</button></td>
-  </tr>
-</table>
+<div [hidden]="this.listHidden">
+  <h2>Customer List</h2>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Account Number</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let customer of customers">
+      <td>
+        {{customer.firstName}}
+        {{customer.lastName}}
+      </td>
+      <td>
+        {{customer.accountNo}}
+      </td>
+      <td><button (click)="this.updateCustomer(customer)">Update</button></td>
+      <td><button (click)="this.deleteCustomer(customer.id)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<div [hidden]="!this.listHidden">
+  <h2>Update Customer</h2>
+  <form> <br />
+    Customer First Name: <input name="firstName" [(ngModel)]="this.updatedCustomer.firstName" type="text" /> <br /> <br />
+    Customer Last Name: <input name="lastName" [(ngModel)]="this.updatedCustomer.lastName" type="text" /> <br /> <br />
+    Customer Account Number: <input name="accountNo" [(ngModel)]="this.updatedCustomer.accountNo" type="text" /> <br /><br />
+    <button (click)="this.saveCustomerChanges()">Save Changes</button>
+  </form>
+</div>

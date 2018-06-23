@@ -23,8 +23,20 @@ export class CustomerService {
     return "http://localhost:8080/delete-customer/";
   }
 
+  getPutWebPath() {
+    return "http://localhost:8080/update-customer";
+  }
+
   deleteCustomer(id) {
-    return this.http.delete(this.getDeleteWebPath()+ id);
+    return this.http.delete(this.getDeleteWebPath() + id);
+  }
+
+  updateCustomer(customer) {
+    console.log("CustomerService updateCustomer hit with" + JSON.stringify(customer));
+    return this.http.put(this.getPutWebPath(), JSON.stringify(customer)).subscribe(
+        response => response as customer,
+        error => console.log(error)
+    );
   }
 
 }
