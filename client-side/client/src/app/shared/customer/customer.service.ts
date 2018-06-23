@@ -11,12 +11,20 @@ export class CustomerService {
 
   getAll(): Observable<any> {
     let webPath = "//localhost:8080/all-customers";
-    console.log("CustomerService getAll hit" + this.http.get('//localhost:8080/all-customers'));
-    return this.http.get(this.getWebPath());
+    console.log("CustomerService getAll hit");
+    return this.http.get(this.getGetWebPath());
   }
 
-  getWebPath() {
+  getGetWebPath() {
     return "//localhost:8080/all-customers";
+  }
+
+  getDeleteWebPath() {
+    return "http://localhost:8080/delete-customer/";
+  }
+
+  deleteCustomer(id) {
+    return this.http.delete(this.getDeleteWebPath()+ id);
   }
 
 }

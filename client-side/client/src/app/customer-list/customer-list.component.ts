@@ -17,4 +17,11 @@ export class CustomerListComponent implements OnInit {
       this.customers = data;
     });
   }
+
+  deleteCustomer(id) {
+    console.log("customer-list-component deleteCustomer hit with id:" + id);
+    this.customerService.deleteCustomer(id).subscribe((response) => {
+       console.log("deleted"));
+     });
+  }
 }

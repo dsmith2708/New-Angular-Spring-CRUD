@@ -29,18 +29,21 @@ public class CustomerAccountController {
     }
 	
 	@PostMapping("/add-customer")
+	@CrossOrigin(origins = "http://localhost:4200")
     @ResponseBody
     public String createCustomer(@RequestBody String customerJson){
     	return accountService.addAccount(customerJson);
     }
 	
 	@PutMapping("/update-customer")
+	@CrossOrigin(origins = "http://localhost:4200")
     @ResponseBody
     public String updateCustomer(@RequestBody String customerJson) {
     	return accountService.updateAccount(customerJson);
     }
 	
 	@DeleteMapping(value="/delete-customer/{accountID}")
+	@CrossOrigin(origins = "http://localhost:4200")
     @ResponseBody
     public String returnRequestBody(@PathVariable long accountID){
     	return accountService.deleteAccount(accountID);
