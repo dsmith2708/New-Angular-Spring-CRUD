@@ -34,14 +34,12 @@ export class CustomerListComponent implements OnInit {
     this.listHidden = false;
     console.log(this.customerService.updateCustomer(this.updatedCustomer));
     location.reload();
-  }
+  };
 
   deleteCustomer(id) {
     console.log("customer-list-component deleteCustomer hit with id:" + id);
-    this.customerService.deleteCustomer(id).subscribe((response) => {
-       console.log("deleted"));
-       location.reload();
-     };
+    console.log(this.customerService.deleteCustomer(id));
+    location.reload();
   };
 
 

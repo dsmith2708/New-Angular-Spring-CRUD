@@ -20,7 +20,7 @@ export class CustomerService {
   }
 
   getDeleteWebPath() {
-    return "http://localhost:8080/delete-customer/";
+    return "//localhost:8080/delete-customer/";
   }
 
   getPutWebPath() {
@@ -28,7 +28,10 @@ export class CustomerService {
   }
 
   deleteCustomer(id) {
-    return this.http.delete(this.getDeleteWebPath() + id);
+    return this.http.delete(this.getDeleteWebPath() + id).subscribe(
+        response => response as customer,
+        error => console.log(error)
+    );
   }
 
   updateCustomer(customer) {
