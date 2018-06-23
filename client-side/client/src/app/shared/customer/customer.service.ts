@@ -19,12 +19,23 @@ export class CustomerService {
     return "//localhost:8080/all-customers";
   }
 
+  getPostWebPath() {
+    return "//localhost:8080/add-customer";
+  }
+
   getDeleteWebPath() {
     return "//localhost:8080/delete-customer/";
   }
 
   getPutWebPath() {
     return "http://localhost:8080/update-customer";
+  }
+
+  saveNewCustomer(newCustomer) {
+    return this.http.post(this.getPostWebPath(), JSON.stringify(newCustomer)).subscribe(
+        response => response as customer,
+        error => console.log(error)
+    );
   }
 
   deleteCustomer(id) {

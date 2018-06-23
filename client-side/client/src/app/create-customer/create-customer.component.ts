@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../shared/customer/customer.service';
 
 @Component({
   selector: 'app-create-customer',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCustomerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private customerService: CustomerService) { }
+
+  newCustomer = {};
 
   ngOnInit() {
   }
 
+  saveNewCustomer() {
+    console.log(this.customerService.saveNewCustomer(this.newCustomer));
+    location.reload();
+  }
 }
