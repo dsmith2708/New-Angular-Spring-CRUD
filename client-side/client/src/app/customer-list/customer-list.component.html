@@ -24,10 +24,33 @@
 </div>
 <div [hidden]="!this.listHidden">
   <h2>Update Customer</h2>
-  <form> <br />
-    Customer First Name: <input name="firstName" [(ngModel)]="this.updatedCustomer.firstName" type="text" /> <br /> <br />
-    Customer Last Name: <input name="lastName" [(ngModel)]="this.updatedCustomer.lastName" type="text" /> <br /> <br />
-    Customer Account Number: <input name="accountNo" [(ngModel)]="this.updatedCustomer.accountNo" type="text" /> <br /><br />
-    <button (click)="this.saveCustomerChanges()">Save Changes</button>
+  <form>
+    <table>
+      <tr>
+        <td>
+          <span>Customer First Name: </span>
+        </td>
+        <td>
+          <input name="firstName" [(ngModel)]="this.updatedCustomer.firstName" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Customer Last Name: </span>
+        </td>
+        <td>
+          <input name="lastName" [(ngModel)]="this.updatedCustomer.lastName" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Customer Account Number: </span>
+        </td>
+        <td>
+          <input name="accountNo" [(ngModel)]="this.updatedCustomer.accountNo" type="text" />
+        </td>
+      </tr>
+    </table>
+    <button class="saveChangesBtn" (click)="this.saveCustomerChanges()">Save Changes</button>
   </form>
 </div>

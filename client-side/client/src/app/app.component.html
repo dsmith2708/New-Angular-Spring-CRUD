@@ -6,5 +6,4 @@
 
 <app-customer-list [hidden]="this.showCreateCustomer"></app-customer-list>
 <button [hidden]="this.showCreateCustomer" (click)="this.showAddCustomer()">Add New User</button>
-<br />
 <app-create-customer [hidden]="!this.showCreateCustomer"></app-create-customer>

@@ -33,14 +33,14 @@ export class CustomerService {
 
   saveNewCustomer(newCustomer) {
     return this.http.post(this.getPostWebPath(), JSON.stringify(newCustomer)).subscribe(
-        response => response as customer,
+        response => response,
         error => console.log(error)
     );
   }
 
   deleteCustomer(id) {
     return this.http.delete(this.getDeleteWebPath() + id).subscribe(
-        response => response as customer,
+        response => response,
         error => console.log(error)
     );
   }
@@ -48,7 +48,7 @@ export class CustomerService {
   updateCustomer(customer) {
     console.log("CustomerService updateCustomer hit with" + JSON.stringify(customer));
     return this.http.put(this.getPutWebPath(), JSON.stringify(customer)).subscribe(
-        response => response as customer,
+        response => response,
         error => console.log(error)
     );
   }
