@@ -10,7 +10,7 @@ export class CustomerListComponent implements OnInit {
 
   customers: Array<any>;
 
-  updatedCustomer = {};
+  updatedCustomer: {[k: string]: any} = {};
 
   listHidden = false;
 
