@@ -1,13 +1,14 @@
 
 <h2>Add new Customer</h2>
 
+<form>
 <table>
   <tr>
     <td>
       <span>Customer First Name:</span>
     </td>
     <td>
-      <input [(ngModel)]="this.newCustomer.firstName" name="newCustomerFirstName" type="text" />
+      <input [(ngModel)]="this.newCustomer.firstName" name="newCustomerFirstName" required minlength="2" maxlength="30" type="text" />
     </td>
   </tr>
   <tr>
@@ -15,7 +16,7 @@
       <span>Customer Last Name: </span>
     </td>
     <td>
-      <input [(ngModel)]="this.newCustomer.lastName" name="newCustomerLastName" type="text" />
+      <input [(ngModel)]="this.newCustomer.lastName" required minlength="2" maxlength="30" name="newCustomerLastName" type="text" />
     </td>
   </tr>
   <tr>
@@ -23,8 +24,9 @@
       <span>Customer Account Number: </span>
     </td>
     <td>
-      <input [(ngModel)]="this.newCustomer.accountNo" name="newCustomerAccountNo"type="text" />
+      <input [(ngModel)]="this.newCustomer.accountNo" minlength="4" maxlength="4" name="newCustomerAccountNo" type="text" />
     </td>
   </tr>
 </table>
-<button (click)="this.saveNewCustomer()">Save</button>
+<input type="submit" (click)="this.saveNewCustomer()" value="Save" />
+</form>

@@ -1,4 +1,4 @@
-button {
+input[type="submit"] {
   background-color: #8e8e8e;
   border: none;
   color: white;

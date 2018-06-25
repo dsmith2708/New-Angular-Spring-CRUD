@@ -9,7 +9,6 @@ import { CustomerService } from '../shared/customer/customer.service';
 export class CustomerListComponent implements OnInit {
 
   customers: Array<any>;
-
   updatedCustomer: {[k: string]: any} = {};
 
   listHidden = false;
