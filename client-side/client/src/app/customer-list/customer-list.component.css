@@ -1,0 +1,46 @@
+button {
+  border-radius: 12px;
+  background-color: #8e8e8e;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+h2 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+th {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.0em;
+}
+
+td {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.9em;
+}
+
+table {
+  margin: auto;
+}
+
+.saveChangesBtn {
+  background-color: #8e8e8e;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+span {
+  text-align: left;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.9em;
+  margin-right: 0.2em;
+  float: left;
+}
